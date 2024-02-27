@@ -190,4 +190,128 @@ header .header_logo {
   font-size: 14px;
   font-weight: 400;
   line-height: 140%;
+}
+
+.commercial_offer .commercial_offer_title {
+  margin-bottom: 24px;
+}
+.commercial_offer .commercial_offer_title h5 {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  margin-bottom: 12px;
+}
+.commercial_offer .commercial_offer_title p {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+}
+.commercial_offer .commercial_offer_cards {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+  border-radius: 12px;
+  background: rgb(243, 243, 243);
+  padding: 8px;
+  margin-bottom: 24px;
+}
+.commercial_offer .commercial_offer_card {
+  flex: 1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px;
+}
+.commercial_offer .commercial_offer_card h4 {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+}
+.commercial_offer .commercial_offer_card p {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+.commercial_offer .one {
+  background: linear-gradient(225deg, rgb(40, 102, 225), rgb(38, 154, 239) 100%);
+}
+.commercial_offer .two {
+  background: linear-gradient(225deg, rgb(147, 83, 198), rgb(199, 127, 244) 100%);
+}
+.commercial_offer .three {
+  background: linear-gradient(42.8deg, rgb(1, 150, 216) -0.843%, rgb(1, 216, 216) 100%);
+}
+.commercial_offer .commercial_offer_content {
+  margin-bottom: 24px;
+  border-radius: 8px;
+  padding: 16px;
+  background: rgb(243, 243, 243);
+}
+.commercial_offer .commercial_offer_content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgb(217, 217, 217);
+}
+.commercial_offer .commercial_offer_content .offer_content_center {
+  padding-top: 12px;
+}
+.commercial_offer .commercial_offer_content .offer_content_bottom {
+  padding-top: 12px;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.commercial_offer .commercial_offer_content li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.commercial_offer .commercial_offer_content span {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+.commercial_offer .commercial_offer_content .green_text {
+  color: rgb(22, 162, 19);
+}
+.commercial_offer .commercial_offer_content h6 {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+}
+.commercial_offer .commercial_offer_content h6 del {
+  margin-right: 8px;
+  color: rgb(202, 49, 49);
+  text-decoration-line: line-through;
+}
+.commercial_offer .offer_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.commercial_offer .offer_buttons button {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  border-radius: 12px;
+  height: 48px;
+}
+.commercial_offer .offer_buttons .btn_one {
+  background: linear-gradient(135deg, rgb(1, 150, 216) 0%, rgb(30, 181, 136) 100%);
+}
+.commercial_offer .offer_buttons .btn_two {
+  background: rgb(119, 119, 119);
+}
+.commercial_offer .offer_buttons .btn_three {
+  background: rgb(243, 243, 243);
+  color: #000;
 }/*# sourceMappingURL=style.css.map */
