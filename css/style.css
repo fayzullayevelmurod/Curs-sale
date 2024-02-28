@@ -362,4 +362,26 @@ header .header_logo {
   width: 40px;
   height: 40px;
   background: rgba(0, 0, 0, 0.45);
+}
+
+.list {
+  margin-top: 40px;
+}
+.list button {
+  padding: 10px 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list button h6 {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+.list button h6 img {
+  margin-right: 8px;
 }/*# sourceMappingURL=style.css.map */
