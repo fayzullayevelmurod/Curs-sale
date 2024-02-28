@@ -176,6 +176,27 @@ header {
         font-weight: 400;
         line-height: 140%;
     }
+
+    .user_mini {
+        margin-top: 16px;
+        @include flex-start();
+        gap: 20px;
+
+        h6 {
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 140%;
+            margin-bottom: 2px;
+        }
+
+        span {
+            color: rgb(115, 115, 115);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 140%;
+        }
+    }
 }
 // user_top
 
@@ -404,7 +425,40 @@ header {
 }
 // commercial_offer
 
+// main_slider
+.main_slider {
+    .slider_title {
+        margin: 80px 0 40px 0;
+        @include flex-center();
+        justify-content: space-between;
 
+        h6 {
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+    }
+
+    .swiper-wrapper {
+        .swiper-slide {
+            position: relative;
+
+            .play_btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @include flex-full-center();
+                border-radius: 12px;
+                width: 40px;
+                height: 40px;
+                background: rgba(0, 0, 0, 0.45);
+            }
+        }
+    }
+}
+// main_slider
 
 
 
