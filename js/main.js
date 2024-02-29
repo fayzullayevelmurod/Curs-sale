@@ -33,3 +33,27 @@ header_under_btn.addEventListener('click', () => {
   header_under_content.classList.toggle('active')
   header_under_btn.classList.toggle('active')
 })
+
+
+
+let main_btns = document.querySelectorAll('.main_btns label');
+
+main_btns.forEach(item => {
+  item.addEventListener('click', () => {
+    checkRadio()
+  })
+})
+
+checkRadio();
+
+function checkRadio() {
+  main_btns.forEach(item => {
+
+    let input = item.querySelector('input')
+    if(input.checked) {
+      item.classList.add('active')
+    } else {
+      item.classList.remove('active')
+    }
+  })
+}

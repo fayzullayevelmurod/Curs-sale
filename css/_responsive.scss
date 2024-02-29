@@ -218,6 +218,16 @@
 }
 
 @media only screen and (max-width: 576px) {
+
+    .modal {
+        width: calc(100% - 40px);
+        padding: 24px;
+
+        h6, p {
+            margin-bottom: 15px;
+        }
+    }
+
     .option {
         #lightgallerytwo {
             .option_img {

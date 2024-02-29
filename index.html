@@ -21,7 +21,8 @@
     <div class="wrapper">
 
         <!-- modal -->
-        <div class="modal">
+        <div class="modal_bg"></div>
+        <form  class="modal modal_main">
             <h6>
                 Отменить коммерческое предложение?
             </h6>
@@ -29,25 +30,57 @@
                 Уточните пожалуйста причину отказа, ваш ответ поможет нам стать лучше!
             </p>
             <div class="main_btns">
-                <a href="#">
+                <label>
+                    <input type="radio" name="radio_btn">
                     Не устраивает цена
-                </a>
-                <a href="#">
+                </label>
+                <label>
+                    <input type="radio" name="radio_btn">
                     Не хватает вариантов решений
-                </a>
-                <a href="#">
+                </label>
+                <label>
+                    <input type="radio" name="radio_btn">
                     Не понравился дизайн-проект
-                </a>
-                <a href="#">
+                </label>
+                <label>
+                    <input type="radio" name="radio_btn">
                     Не понравился дизайнер
-                </a>
+                </label>
             </div>
             <div class="bottom_btns">
-                <button>
+                <button class="left_btn" type="submit">
                     Отправить
                 </button>
-                <button>
+                <button class="right_btn" type="button">
                     Закрыть
+                </button>
+            </div>
+        </form>
+
+        <div class="modal modal_fine">
+            <h6>
+                Коммерческое предложение подтверждено!
+            </h6>
+            <p>
+                Ваш дизайнер скоро с вами свяжется и выставит счет для оплаты проекта
+            </p>
+            <div class="bottom_btns">
+                <button class="left_btn" type="submit">
+                    Отправить
+                </button>
+            </div>
+        </div>
+
+        <div class="modal modal_close">
+            <h6>
+                Коммерческое предложение октлонено!
+            </h6>
+            <p>
+                Спасибо за отзыв!
+            </p>
+            <div class="bottom_btns">
+                <button class="right_btn" type="submit">
+                    Отправить
                 </button>
             </div>
         </div>
