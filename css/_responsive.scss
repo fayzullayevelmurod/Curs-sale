@@ -1,0 +1,230 @@
+@media only screen and (max-width: 993px) {
+    header {
+        .main_container {
+            gap: 24px;
+        }
+
+        h1 {
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 130%;
+        }
+
+        .header_logo {
+            flex-shrink: 0;
+            width: 120px;
+            height: 84px;
+            @include flex-full-center;
+
+            img {
+                min-width: 62px;
+                padding: 0;
+            }
+        }
+    }
+
+    .header_under {
+        .main_container {
+            .header_under_btn {
+                margin-bottom: 12px;
+            }
+
+            .header_under_content {
+                li {
+                    .addres {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+    
+    .user {
+        margin-bottom: 40px;
+        .main_container {
+            gap: 20px;
+        }
+
+        h6 {
+            margin-bottom: 2px;
+        }
+
+        .user_text_title_right {
+            display: none;
+        }
+        
+        .user_img {
+            min-width: 80px;
+            width: 80px;
+        }
+
+        .dektop_text {
+            display: none;
+        }
+
+        .user_media_block {
+            display: block;
+            margin-top: 16px;
+
+            .user_btns {
+                margin-bottom: 16px;
+                @include flex-center;
+                gap: 8px;
+
+                a {
+                    font-size: 14px;
+                }
+            }
+
+            p {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 140%;
+            }
+        }
+    }
+
+    .commercial_offer {
+        .commercial_offer_title {
+            h5 {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 22px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .commercial_offer_cards {
+            flex-direction: column;
+            background-color: transparent;
+        }
+
+        .commercial_offer_card  {
+            gap: 12px;
+
+            h4 {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+
+        .commercial_offer_content {
+            span {
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            h6 {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+
+        .offer_buttons {
+            gap: 8px;
+        }
+    }
+
+    .main_slider {
+        .slider_title {
+            margin: 40px 0;
+        }
+    }
+
+    .list {
+        margin-top: 16px;
+
+        ul {
+            li {
+                align-items: start;
+                .list_text_end {
+                    display: flex;
+                }
+                span {
+                    width: 80px;
+                }
+            }
+        }
+    }
+
+    .option {
+        margin: 40px 0 32px 0;
+
+        .main_container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .option_title {
+            margin-bottom: 24px;
+            order: 1;
+            h6 {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+
+        #lightgallery {
+            order: 2;
+        }
+
+        .option_cards {
+            margin-top: 24px;
+            margin-bottom: 0;
+            order: 3;
+            flex-direction: column;
+
+            .option_card {
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 30px;
+            }
+        }
+    }
+
+    .commercial_offer_two {
+        margin: 40px 0;
+    }
+
+    footer {
+        .footer_links {
+            flex-direction: column;
+
+            a {
+                padding: 12px 20px;
+            }
+        }
+
+        .footer_bottom {
+            margin: 24px 0;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+    .option {
+        #lightgallery {
+            .option_img {
+                width: 100%;
+                img {border-radius: 8px;
+                    height: 160px;
+                    object-fit: cover;
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
