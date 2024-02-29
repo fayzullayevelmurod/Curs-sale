@@ -93,6 +93,7 @@ button {
 }
 
 .modal_bg {
+    display: none;
     position: fixed;
     z-index: 4;
     width: 100%;
@@ -207,7 +208,7 @@ button {
 }
 
 .modal_close {
-    display: block;
+    display: none;
 
     .bottom_btns {
         display: block;
@@ -215,6 +216,65 @@ button {
 
     .right_btn {
         min-width: 180px;
+    }
+}
+
+.bottom_notification {
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    background: white;
+    
+    .main_container {
+        padding: 15px 0;
+        border-top: 1px solid rgb(205, 205, 205);
+        @include flex-center();
+        gap: 30px;
+    }
+
+    .bottom_notification_text {
+        width: 100%;
+        @include flex-center();
+        justify-content: space-between;
+    }
+
+    h6 {
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+
+        del {
+            text-decoration-line: line-through;
+            color: rgb(202, 49, 49);
+            margin-right: 8px;
+        }
+    }
+
+    .bottom_notification_btns {
+        margin-left: auto;
+        display: flex;
+        gap: 8px;
+
+        button {
+            white-space: nowrap;
+            padding: 0 20px;
+            height: 48px;
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 150%;
+            border-radius: 12px;
+        }
+
+        .notification_one_btn {
+            background: linear-gradient(135.00deg, rgb(1, 150, 216) 0%,rgb(30, 181, 136) 100%);
+        }
+
+        .notification_two_btn {
+            background: rgb(119, 119, 119);
+        }
     }
 }
 
@@ -719,6 +779,8 @@ header {
         margin-bottom: 40px;
 
         .option_card {
+            user-select: none;
+            cursor: pointer;
             padding: 16px;
             flex: 1;
             display: flex;
@@ -747,6 +809,14 @@ header {
                 color: #313149;
                 border: 2px solid transparent;
             }
+
+        }
+
+        .option_card.active {
+            background: linear-gradient(#fff 0 0) padding-box, 
+            linear-gradient(135.00deg, rgb(141, 198, 83), rgb(30, 181, 145)) border-box;
+            color: #313149;
+            border: 2px solid transparent;
         }
 
         .one {
