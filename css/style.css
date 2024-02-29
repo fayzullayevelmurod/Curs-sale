@@ -56,9 +56,25 @@ button {
   margin: 0 auto;
 }
 
-.lg-outer .lg-item .lg-complete .lg-zoomable .lg-image {
-  width: 60% !important;
-  transform: scale3d(2, 2, 1) !important;
+.modal {
+  border-radius: 12px;
+  padding: 24px 48px;
+  background: rgb(255, 255, 255);
+  text-align: center;
+}
+.modal h6 {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  margin-bottom: 40px;
+}
+.modal p {
+  color: rgb(67, 67, 67);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 40px;
 }
 
 header {
@@ -107,9 +123,7 @@ header .header_logo {
   position: relative;
   z-index: -1;
   opacity: 0;
-  width: 0;
   height: 0;
-  padding: 0px;
   border: 1px solid rgb(216, 216, 216);
   border-radius: 8px;
   display: flex;
@@ -130,7 +144,6 @@ header .header_logo {
 .header_under .main_container .header_under_content.active {
   padding: 16px;
   height: auto;
-  width: auto;
   opacity: 1;
 }
 
@@ -224,29 +237,21 @@ header .header_logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 20px;
+  background: linear-gradient(#fff 0 0) padding-box, linear-gradient(135deg, rgb(141, 198, 83), rgb(30, 181, 145)) border-box;
+  color: #313149;
+  border: 2px solid transparent;
   border-radius: 12px;
-  background-image: linear-gradient(135deg, rgb(1, 150, 216) 0%, rgb(30, 181, 136) 100%);
-  position: relative;
-  z-index: 1;
+}
+.user .whatsapp_btn span {
   background: linear-gradient(135deg, rgb(141, 198, 83), rgb(30, 181, 145));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-}
-.user .whatsapp_btn:before {
-  content: "";
-  display: block;
-  background-color: white;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-  border-radius: calc(12px - 3%);
-  height: 46px;
-  width: 112px;
-  z-index: -1;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  padding: 0 20px;
 }
 .user .user_text_title_right {
   display: flex;
@@ -503,6 +508,8 @@ header .header_logo {
   flex-direction: column;
   gap: 12px;
   border-radius: 8px;
+  border: 2px solid rgb(205, 205, 205);
+  transition: 0.2s ease;
 }
 .option .option_cards .option_card h5 {
   color: rgb(0, 0, 0);
@@ -515,17 +522,16 @@ header .header_logo {
   font-weight: 500;
   line-height: 19px;
 }
+.option .option_cards .option_card:hover {
+  background: linear-gradient(#fff 0 0) padding-box, linear-gradient(135deg, rgb(141, 198, 83), rgb(30, 181, 145)) border-box;
+  color: #313149;
+  border: 2px solid transparent;
+}
 .option .option_cards .one span {
   color: rgb(115, 115, 115);
 }
-.option .option_cards .two {
-  border: 1px solid rgb(205, 205, 205);
-}
 .option .option_cards .two span {
   color: rgb(54, 203, 78);
-}
-.option .option_cards .three {
-  border: 1px solid rgb(205, 205, 205);
 }
 .option .option_cards .three span {
   color: rgb(211, 31, 31);
@@ -624,6 +630,9 @@ footer .footer_bottom a {
   }
   .user .user_media_block .user_btns a {
     font-size: 14px;
+  }
+  .user .user_media_block .user_btns .whatsapp_btn {
+    padding: 10px 2px;
   }
   .user .user_media_block p {
     font-size: 12px;

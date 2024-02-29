@@ -93,19 +93,28 @@ button {
 }
 
 
-.lg-outer {
-    .lg-item{
-        .lg-complete{
-            .lg-zoomable {
-                .lg-image {
-                    width: 60% !important;
-                    transform: scale3d(2,2,1) !important;
-                }
-            }
-        }
+.modal {
+    border-radius: 12px;
+    padding: 24px 48px;
+    background: rgb(255, 255, 255);
+    text-align: center;
+
+    h6 {
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        margin-bottom: 40px;
+    }
+
+    p {
+        color: rgb(67, 67, 67);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%;
+        margin-bottom: 40px;
     }
 }
-
 
 // header
 header {
@@ -163,9 +172,7 @@ header {
             position: relative;
             z-index: -1;
             opacity: 0;
-            width: 0;
             height: 0;
-            padding: 0px;
             border: 1px solid rgb(216, 216, 216);
             border-radius: 8px;
             display: flex;
@@ -188,7 +195,6 @@ header {
         .header_under_content.active {
             padding: 16px;
             height: auto;
-            width: auto;
             opacity: 1;
         }
     }
@@ -295,50 +301,22 @@ header {
 
     .whatsapp_btn {
         @include flex-full-center();
-        // background: linear-gradient(135.00deg, rgb(141, 198, 83),rgb(30, 181, 145));
-        // -webkit-background-clip:
-        // text;
-        // -webkit-text-fill-color:
-        // transparent;
-        // background-clip:
-        // text;
-        // text-fill-color:
-        // transparent;
-        // font-size: 16px;
-        // font-weight: 500;
-        // line-height: 150%;
-        // $border: 5px;
-        // background-clip: padding-box;
-        // border: solid $border transparent;
-        // border-radius: 1em;
-        // position: relative;
-        padding: 12px 20px; 
+        background: linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(135.00deg, rgb(141, 198, 83), rgb(30, 181, 145)) border-box;
+        color: #313149;
+        border: 2px solid transparent;
         border-radius: 12px;
-        background-image: linear-gradient(135.00deg, rgb(1, 150, 216) 0%,rgb(30, 181, 136) 100%);
-        position: relative;
-        z-index: 1;
-        background: linear-gradient(135.00deg, rgb(141, 198, 83),rgb(30, 181, 145));
-        -webkit-background-clip:
-        text;
-        -webkit-text-fill-color:
-        transparent;
-        background-clip:
-        text;
-        text-fill-color:
-        transparent;
-      
-        &:before {
-            content: '';
-            display: block;
-            background-color: white;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            margin: auto 0;
-            border-radius: calc(12px - 3%);
-            height: 46px;
-            width: 112px;
-            z-index: -1;
+
+        span {
+            background: linear-gradient(135.00deg, rgb(141, 198, 83),rgb(30, 181, 145));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color:transparent;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 150%;
+            padding: 0 20px; 
         }
     }
 
@@ -645,6 +623,8 @@ header {
             flex-direction: column;
             gap: 12px;
             border-radius: 8px;
+            border: 2px solid rgb(205, 205, 205);
+            @include transition();
 
             h5 {
                 color: rgb(0, 0, 0);
@@ -658,6 +638,13 @@ header {
                 font-weight: 500;
                 line-height: 19px;
             }
+
+            &:hover {
+                background: linear-gradient(#fff 0 0) padding-box, 
+                linear-gradient(135.00deg, rgb(141, 198, 83), rgb(30, 181, 145)) border-box;
+                color: #313149;
+                border: 2px solid transparent;
+            }
         }
 
         .one {
@@ -667,14 +654,12 @@ header {
         }
 
         .two {
-            border: 1px solid rgb(205, 205, 205);
             span {
                 color: rgb(54, 203, 78);
             }
         }
 
         .three {
-            border: 1px solid rgb(205, 205, 205);
             span {
                 color: rgb(211, 31, 31);
             }
