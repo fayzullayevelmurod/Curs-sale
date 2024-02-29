@@ -240,6 +240,10 @@ button {
   background: rgb(119, 119, 119);
 }
 
+.bottom_notification.active {
+  display: block;
+}
+
 header {
   margin: 30px 0 12px 0;
 }
@@ -612,33 +616,53 @@ header .header_logo {
 .list button h6 img {
   margin-right: 8px;
 }
+.list .list_btn img {
+  transform: rotate(-90deg);
+}
+.list .list_btn.active img {
+  transform: rotate(0);
+}
 .list .one_list {
   margin-bottom: 24px;
 }
-.list ul li {
+.list .list_content {
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+  opacity: 0;
+  height: 0;
+  transition: 0.2s ease;
+}
+.list .list_content li {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 8px;
   padding: 10px 16px 10px 40px;
 }
-.list ul li p, .list ul li span {
+.list .list_content li p, .list .list_content li span {
   color: rgb(0, 0, 0);
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
 }
-.list ul li span {
+.list .list_content li span {
   width: 120px;
 }
-.list ul li span:nth-child(1) {
+.list .list_content li span:nth-child(1) {
   text-align: center;
 }
-.list ul li span:nth-child(2) {
+.list .list_content li span:nth-child(2) {
   text-align: end;
 }
-.list ul li:nth-child(odd) {
+.list .list_content li:nth-child(odd) {
   background: rgb(243, 243, 243);
+}
+.list .list_content.active {
+  padding: 16px;
+  height: auto;
+  opacity: 1;
+  z-index: 1;
 }
 
 .option {
@@ -716,9 +740,6 @@ header .header_logo {
   margin: 80px 0 40px 0;
 }
 
-footer {
-  margin-bottom: 100px;
-}
 footer .footer_links {
   display: flex;
   gap: 8px;
@@ -747,6 +768,10 @@ footer .footer_bottom a {
   font-size: 14px;
   font-weight: 400;
   line-height: 140%;
+}
+
+footer.active {
+  margin-bottom: 100px;
 }
 
 @media only screen and (max-width: 993px) {

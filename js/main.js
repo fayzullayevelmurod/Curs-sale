@@ -83,7 +83,6 @@ function checkOption() {
   })
 }
 
-let notification_one_btn = document.querySelector('.notification_one_btn');
 let modal_main = document.querySelector('.modal_main');
 let modal_bg = document.querySelector('.modal_bg');
 let left_btn = document.querySelector('.left_btn');
@@ -92,6 +91,16 @@ let modal_fine_btn = document.querySelector('.modal_fine_btn');
 let notification_two_btn = document.querySelector('.notification_two_btn');
 let modal_close = document.querySelector('.modal_close');
 let modal_close_btn = document.querySelector('.modal_close_btn');
+let notification_one_btn = document.querySelector('.notification_one_btn') 
+
+// let notification_one_btn = document.querySelectorAll('.notification_one_btn') 
+
+
+// notification_one_btn.forEach((btn, btnIndex) => {
+//   btn.onclick = () => {
+//     modal_main.classList.toggle('active')
+//   }
+// })
 
 notification_one_btn.addEventListener('click', () => {
   modal_main.classList.toggle('active')
@@ -123,3 +132,14 @@ modal_close_btn.addEventListener('click', () => {
   modal_bg.classList.remove('active')
   modal_close.classList.remove('active')
 })
+
+
+let list_btn = document.querySelectorAll('.list_btn')
+let list_content = document.querySelectorAll('.list_content')
+  list_btn.forEach((button, idx) => {
+  button.addEventListener('click', function () {
+    list_content[idx].classList.toggle('active')
+    button.classList.toggle('active')   
+  });
+});
+
