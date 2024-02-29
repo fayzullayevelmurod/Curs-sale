@@ -174,7 +174,7 @@
             }
         }
 
-        #lightgallery {
+        #lightgallerytwo {
             order: 2;
         }
 
@@ -215,7 +215,7 @@
 
 @media only screen and (max-width: 576px) {
     .option {
-        #lightgallery {
+        #lightgallerytwo {
             .option_img {
                 width: 100%;
                 img {border-radius: 8px;
@@ -223,6 +223,16 @@
                     object-fit: cover;
                     width: 100%;
                     max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .user {
+        .user_media_block {
+            .user_btns {
+                a {
+                    flex: 1;
                 }
             }
         }
