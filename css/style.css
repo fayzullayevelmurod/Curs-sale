@@ -65,8 +65,11 @@ button {
   background: rgba(0, 0, 0, 0.8);
 }
 
+.modal_bg.active {
+  display: block;
+}
+
 .modal {
-  display: none;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -148,6 +151,14 @@ button {
   background: rgb(119, 119, 119);
 }
 
+.modal_main {
+  display: none;
+}
+
+.modal_main.active {
+  display: block;
+}
+
 .modal_fine {
   display: none;
 }
@@ -156,6 +167,10 @@ button {
 }
 .modal_fine .left_btn {
   min-width: 180px;
+}
+
+.modal_fine.active {
+  display: block;
 }
 
 .modal_close {
@@ -168,6 +183,10 @@ button {
   min-width: 180px;
 }
 
+.modal_close.active {
+  display: block;
+}
+
 .bottom_notification {
   width: 100%;
   position: fixed;
@@ -176,7 +195,7 @@ button {
   background: white;
 }
 .bottom_notification .main_container {
-  padding: 15px 0;
+  padding: 15px;
   border-top: 1px solid rgb(205, 205, 205);
   display: flex;
   align-items: center;
@@ -675,6 +694,9 @@ header .header_logo {
   color: #313149;
   border: 2px solid transparent;
 }
+.option .option_cards .option_card input {
+  display: none;
+}
 .option .option_cards .option_card.active {
   background: linear-gradient(#fff 0 0) padding-box, linear-gradient(135deg, rgb(141, 198, 83), rgb(30, 181, 145)) border-box;
   color: #313149;
@@ -694,6 +716,9 @@ header .header_logo {
   margin: 80px 0 40px 0;
 }
 
+footer {
+  margin-bottom: 100px;
+}
 footer .footer_links {
   display: flex;
   gap: 8px;
@@ -875,6 +900,22 @@ footer .footer_bottom a {
   .commercial_offer_two {
     margin: 40px 0;
   }
+  .bottom_notification .main_container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .bottom_notification h6 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+  }
+  .bottom_notification .bottom_notification_btns {
+    margin-left: 0;
+  }
+  .bottom_notification .bottom_notification_btns button {
+    width: 100%;
+    flex: 1;
+  }
   footer .footer_links {
     flex-direction: column;
   }
@@ -906,5 +947,16 @@ footer .footer_bottom a {
   }
   .user .user_media_block .user_btns a {
     flex: 1;
+  }
+  .bottom_notification .bottom_notification_btns {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .bottom_notification .bottom_notification_btns {
+    flex-direction: column;
+  }
+  .bottom_notification .bottom_notification_btns button {
+    min-height: 48px;
   }
 }/*# sourceMappingURL=style.css.map */

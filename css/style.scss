@@ -101,8 +101,11 @@ button {
     background: rgba(0, 0, 0, 0.8);
 }
 
+.modal_bg.active {
+    display: block;
+}
+
 .modal {
-    display: none;
     position: fixed;
     left: 50%;
     top: 50%;
@@ -195,6 +198,14 @@ button {
     }
 }
 
+.modal_main {
+    display: none;
+}
+
+.modal_main.active {
+    display: block;
+}
+
 .modal_fine {
    display: none;
 
@@ -205,6 +216,10 @@ button {
     .left_btn {
         min-width: 180px;
     }
+}
+
+.modal_fine.active {
+    display: block;
 }
 
 .modal_close {
@@ -219,6 +234,10 @@ button {
     }
 }
 
+.modal_close.active {
+    display: block;
+}
+
 .bottom_notification {
     width: 100%;
     position: fixed;
@@ -227,7 +246,7 @@ button {
     background: white;
     
     .main_container {
-        padding: 15px 0;
+        padding: 15px;
         border-top: 1px solid rgb(205, 205, 205);
         @include flex-center();
         gap: 30px;
@@ -810,6 +829,10 @@ header {
                 border: 2px solid transparent;
             }
 
+            input {
+                display: none;
+            }
+
         }
 
         .option_card.active {
@@ -848,6 +871,7 @@ header {
 
 // footer
 footer  {
+    margin-bottom: 100px;
     .footer_links {
         display: flex;
         gap: 8px;
