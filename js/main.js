@@ -88,28 +88,31 @@ let modal_bg = document.querySelector('.modal_bg');
 let left_btn = document.querySelector('.left_btn');
 let modal_fine = document.querySelector('.modal_fine');
 let modal_fine_btn = document.querySelector('.modal_fine_btn');
-let notification_two_btn = document.querySelector('.notification_two_btn');
+let notification_two_btn = document.querySelectorAll('.notification_two_btn');
 let modal_close = document.querySelector('.modal_close');
 let modal_close_btn = document.querySelector('.modal_close_btn');
-let notification_one_btn = document.querySelector('.notification_one_btn') 
+let notification_one_btn = document.querySelectorAll('.notification_one_btn')
+let modal_close_2 = document.querySelector('.modal_main .bottom_btns .right_btn');
 
-// let notification_one_btn = document.querySelectorAll('.notification_one_btn') 
+modal_close_2.onclick = () => {
+  modal_bg.classList.remove('active')
+  modal_main.classList.remove('active')
+  modal_fine.classList.remove('active')
+  modal_close.classList.remove('active')
+}
 
-
-// notification_one_btn.forEach((btn, btnIndex) => {
-//   btn.onclick = () => {
-//     modal_main.classList.toggle('active')
-//   }
-// })
-
-notification_one_btn.addEventListener('click', () => {
-  modal_main.classList.toggle('active')
-  modal_bg.classList.toggle('active')
+notification_one_btn.forEach(btn => {
+  btn.addEventListener('click', () => {
+    modal_main.classList.toggle('active')
+    modal_bg.classList.toggle('active')
+  })
 })
 
 modal_bg.addEventListener('click', () => {
   modal_bg.classList.remove('active')
   modal_main.classList.remove('active')
+  modal_fine.classList.remove('active')
+  modal_close.classList.remove('active')
 })
 
 left_btn.addEventListener('click', () => {
@@ -123,9 +126,11 @@ modal_fine_btn.addEventListener('click', () => {
   modal_bg.classList.remove('active')
 })
 
-notification_two_btn.addEventListener('click', () => {
-  modal_close.classList.add('active')
-  modal_bg.classList.add('active')
+notification_two_btn.forEach(btn => {
+  btn.addEventListener('click', () => {
+    modal_close.classList.add('active')
+    modal_bg.classList.add('active')
+  })
 })
 
 modal_close_btn.addEventListener('click', () => {
@@ -156,3 +161,4 @@ document.addEventListener('scroll', function () {
     notification_el.style.display = 'block';
   }
 })
+
