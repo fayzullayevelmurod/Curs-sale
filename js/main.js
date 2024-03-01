@@ -143,3 +143,16 @@ let list_content = document.querySelectorAll('.list_content')
   });
 });
 
+let btn1 = document.querySelectorAll('.notification_one_btn');
+let notification_el = document.querySelector('.bottom_notification');
+
+document.addEventListener('scroll', function () {
+  let scroll_top = btn1[1].getBoundingClientRect().top - window.innerHeight;
+  let scroll_top2 = btn1[2].getBoundingClientRect().top - window.innerHeight;
+
+  if (scroll_top < 0 && scroll_top > (-1) * window.innerHeight || scroll_top2 < 0 && scroll_top2 > (-1) * window.innerHeight) {
+    notification_el.style.display = 'none';
+  } else {
+    notification_el.style.display = 'block';
+  }
+})
