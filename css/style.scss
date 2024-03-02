@@ -670,6 +670,18 @@ header {
 }
 // commercial_offer
 
+// drop
+.drop {
+    overflow: hidden;
+    @include transition();
+    height: 0px;
+}
+
+.drop.active {
+    height: auto;
+}
+// drop
+
 // main_slider
 .main_slider {
     .slider_title {
@@ -894,12 +906,13 @@ header {
 
 // commercial_offer_two
 .commercial_offer_two {
-    margin: 80px 0 40px 0;
+    margin-top: 80px;
 }
 // commercial_offer_two
 
 // footer
 footer  {
+    margin-top: 40px;
     .footer_links {
         display: flex;
         gap: 8px;
@@ -929,6 +942,7 @@ footer  {
         }
     }
 }
+
 footer.active {
     margin-bottom: 100px;
 }

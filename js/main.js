@@ -162,3 +162,11 @@ document.addEventListener('scroll', function () {
   }
 })
 
+
+
+let drop_btn = document.querySelector('.drop_btn')
+let drop = document.querySelector('.drop')
+
+drop_btn.addEventListener('click', () => {
+  drop.classList.toggle('active')
+})

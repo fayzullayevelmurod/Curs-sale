@@ -556,6 +556,16 @@ header .header_logo {
   color: #000;
 }
 
+.drop {
+  overflow: hidden;
+  transition: 0.2s ease;
+  height: 0px;
+}
+
+.drop.active {
+  height: auto;
+}
+
 .main_slider .slider_title {
   margin: 80px 0 40px 0;
   display: flex;
@@ -737,9 +747,12 @@ header .header_logo {
 }
 
 .commercial_offer_two {
-  margin: 80px 0 40px 0;
+  margin-top: 80px;
 }
 
+footer {
+  margin-top: 40px;
+}
 footer .footer_links {
   display: flex;
   gap: 8px;
