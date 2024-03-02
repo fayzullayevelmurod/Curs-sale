@@ -274,6 +274,24 @@
         }
     }
 
+    .list {
+        button {
+            padding: 10px;
+        }
+        .list_content {
+            li {
+                padding: 10px 12px 10px 30px;
+                span {
+                    width: 80px;
+                }
+            }
+        }
+
+        .list_content.active {
+            padding: 10px;
+        }
+    }
+
     .bottom_notification {
         .bottom_notification_btns {
             width: 100%;

@@ -986,6 +986,18 @@ footer.active {
   .user .user_media_block .user_btns a {
     flex: 1;
   }
+  .list button {
+    padding: 10px;
+  }
+  .list .list_content li {
+    padding: 10px 12px 10px 30px;
+  }
+  .list .list_content li span {
+    width: 80px;
+  }
+  .list .list_content.active {
+    padding: 10px;
+  }
   .bottom_notification .bottom_notification_btns {
     width: 100%;
   }
